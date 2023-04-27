@@ -1,3 +1,4 @@
+import 'package:fleur/views/home_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,19 +25,8 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.green,
       ),
-      home: const HomePage(),
+      home: const HomeView(),
     );
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Klasifikasi Bunga'),),
-      body: Center(child: Text('apa aja boleh',style: TextStyle(fontSize: 20),)),
-    );
-  }
-}
