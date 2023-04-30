@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+  HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,15 +10,16 @@ class HomeView extends StatelessWidget {
         child: Column(
           children: [
             Container(
+              decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/gambar.png"),fit: BoxFit.cover)),
               height: 100,
               width: double.maxFinite,
-              color: Color(0XFF00A659),
             ),
             SizedBox(
               height: 20,
             ),
-            Text('Klasifikasi Bunga',
-            style: TextStyle(fontSize: 24),
+            Text(
+              'Klasifikasi Bunga',
+              style: TextStyle(fontSize: 24),
             ),
             SizedBox(
               height: 70,
@@ -28,7 +29,7 @@ class HomeView extends StatelessWidget {
                 children: [
                   ClipOval(
                     child: Container(
-                      color: Color(0XFF00A659),
+                      color:  Color(0xFF00A659),
                       height: 100,
                       width: 100,
                       child: Icon(
@@ -50,7 +51,7 @@ class HomeView extends StatelessWidget {
                 children: [
                   ClipOval(
                     child: Container(
-                      color: Color(0XFF00A659),
+                      color: Color(0xFF00A659),
                       height: 80,
                       width: 80,
                       child: Icon(
@@ -69,4 +70,5 @@ class HomeView extends StatelessWidget {
       ),
     );
   }
+  
 }

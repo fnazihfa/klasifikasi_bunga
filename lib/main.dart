@@ -1,4 +1,5 @@
 import 'package:fleur/views/home_view.dart';
+import 'package:fleur/views/main_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,8 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.green,
       ),
-      home: const HomeView(),
+      home: MainView(),
     );
   }
 }
-
