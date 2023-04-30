@@ -1,3 +1,4 @@
+import 'package:fleur/views/about_view.dart';
 import 'package:fleur/views/home_view.dart';
 import 'package:flutter/material.dart';
 
@@ -12,11 +13,7 @@ class _MainViewState extends State<MainView> {
   int selectedIndex = 0;
   List<Widget> screen = [
     HomeView(),
-    Scaffold(
-      body: Center(
-        child: Text('About View'),
-      ),
-    )
+    AboutView(),
   ];
 
   @override
