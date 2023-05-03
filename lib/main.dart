@@ -1,6 +1,7 @@
 import 'package:fleur/views/home_view.dart';
 import 'package:fleur/views/main_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() {
   runApp(const MyApp());

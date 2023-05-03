@@ -1,9 +1,32 @@
 import 'package:fleur/views/scan_view.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:tflite/tflite.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends StatefulWidget {
   HomeView({super.key});
+
+  @override
+  State<HomeView> createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> {
+
+  @override
+  void initState() {
+    loadModel();
+    super.initState();
+  }
+
+  Future loadModel() async {
+    Tflite.close();
+    String res;
+      res = (await Tflite.loadModel(
+      model: "assets/klasifikasi_model.tflite",
+      labels: "assets/labels.txt",
+    ))!;
+    print(res);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -110,5 +133,9 @@ class HomeView extends StatelessWidget {
         ),
       ));
     }
+  }
+
+  Future imageClasification() async {
+    
   }
 }

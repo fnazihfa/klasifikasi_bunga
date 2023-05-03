@@ -10,9 +10,10 @@ class AboutView extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
+          padding: EdgeInsets.all(24),
           margin: EdgeInsets.all(24),
-          decoration: BoxDecoration(border: Border.all()),
-          child: Text('Fleur adalah aplikasi yang dapat membantu dalam mengklasifikasikan jenis bunga. Jenis bunga yang dapat diklasifikasikan yaitu daisy, dandelion, rose, sunflower, dan tulip. Aplikasi ini dibuat untuk tujuan pembelajaran dan sebagai syarat penyelesaian tugas akhir sarjana.'),
+          decoration: BoxDecoration(border: Border.all(color: Color(0xFF00A659),width: 2), borderRadius: BorderRadius.circular(32)),
+          child: Text('Fleur adalah aplikasi yang dapat membantu dalam mengklasifikasikan jenis bunga. Jenis bunga yang dapat diklasifikasikan yaitu daisy, dandelion, rose, sunflower, dan tulip. Aplikasi ini dibuat untuk tujuan pembelajaran dan sebagai syarat penyelesaian tugas akhir sarjana.',textAlign: TextAlign.justify),
         ),
       ),
     );
