@@ -127,15 +127,27 @@ class _HomeViewState extends State<HomeView> {
       e.toString();
     }
     if (path != '') {
+      String result = await imageClasification(path);
       Navigator.of(context).push(MaterialPageRoute(
         builder: (context) => ScanView(
           path: path,
+          result: result,
         ),
       ));
+      
     }
   }
 
-  Future imageClasification() async {
-    
+  Future <String> imageClasification(String path) async {
+    List recognitions;
+    recognitions = (await Tflite.runModelOnImage(
+      path: path,   // required
+      imageMean: 0.0,   // defaults to 117.0
+      imageStd: 255.0,  // defaults to 1.0
+      numResults: 2,    // defaults to 5
+      threshold: 0.2,   // defaults to 0.1
+      asynch: true      // defaults to true
+    ))!;
+    return recognitions[0]["label"];
   }
 }
